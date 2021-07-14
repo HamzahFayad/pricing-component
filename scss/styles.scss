@@ -1,0 +1,165 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
+
+$tex-color1: hsl(227, 35%, 25%);
+
+html,
+body,
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Manrope";
+}
+
+main {
+  padding: 0;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background: url("../images/bg-pattern.svg");
+  background-repeat: no-repeat;
+  z-index: -9;
+  .mainSct {
+    display: grid;
+    place-items: center;
+  }
+}
+
+.head {
+  margin: 4% 0;
+  position: relative;
+  z-index: 9;
+  h1 {
+    font-size: 26px;
+    font-weight: 800;
+  }
+  p {
+    font-size: 14px;
+    font-weight: 600;
+  }
+  h1,
+  p {
+    text-align: center;
+    padding: 6px 0;
+    color: $tex-color1;
+  }
+  img {
+    position: absolute;
+    width: 110px;
+    top: -12%;
+    left: 35%;
+    right: 0;
+    z-index: -1;
+  }
+}
+
+.card {
+  background: #fff;
+  box-shadow: 2px 12px 24px 2px hsla(225, 20%, 60%, 0.459);
+  border-radius: 6px;
+  padding: 30px 60px;
+  width: 40%;
+  height: 350px;
+  overflow: hidden;
+  &__part1 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 4% 0;
+    padding-bottom: 30px;
+  }
+  &__part2 {
+    input[type="range"] {
+      width: 100%;
+    }
+    .billing {
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+      margin-top: 4%;
+      margin-left: 12%;
+      padding-bottom: 10px;
+      div {
+        p {
+          font-size: 14px;
+          color: hsl(226, 10%, 57%);
+        }
+        .discount {
+          background: hsl(14, 92%, 95%);
+          color: hsl(15, 100%, 70%);
+          border-radius: 12px;
+          padding: 2px 4px;
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  &__part3 {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin: 2.5% 0;
+    .list {
+      display: flex;
+      flex-flow: column wrap;
+      p {
+        font-size: 12px;
+      }
+    }
+    button {
+      background: hsl(227, 35%, 25%);
+      border-radius: 16px;
+      color: #fff;
+      padding: 8px 20px;
+      outline: none;
+      border: none;
+      align-self: center;
+      cursor: pointer;
+    }
+  }
+}
+hr {
+  width: 100vw;
+  transform: translateX(-100px);
+}
+
+@media only screen and (max-width: 375px) {
+  .head {
+    margin: 10% 0;
+    h1 {
+      padding: 6px;
+      font-size: 22px;
+    }
+    p {
+      width: 60%;
+      margin: 0 auto;
+    }
+  }
+  .card {
+    width: 90%;
+    height: 460px;
+    margin: 8% 0;
+    &__part1,
+    &__part2,
+    &__part3 {
+      flex-flow: column wrap;
+      text-align: center;
+    }
+    .billing {
+      width: 100%;
+      justify-content: space-between;
+      margin-top: 8%;
+      margin-left: 0%;
+      padding-bottom: 20px;
+    }
+    &__part2 {
+      padding-bottom: 20px;
+    }
+    &__part3 {
+      padding: 20px 0;
+      button {
+        margin: 6% 0;
+      }
+    }
+  }
+}
