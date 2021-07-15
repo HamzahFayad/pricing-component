@@ -11,8 +11,8 @@
   let views = ["10K", "50K", "100K", "500K", "1M"];
 
   inputRange.addEventListener("input", () => {
-    if (x) {
-    }
+    /*if (x) {
+    }*/
 
     switch (inputRange.value) {
       case "0":
