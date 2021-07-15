@@ -25,17 +25,27 @@
         </div>
         <div class="card">
           <div class="card__part1">
-            <p>100K PAGEVIEWS</p>
-            <h4>$16.00 <span>/month</span></h4>
+            <p><span class="views">100K</span> PAGEVIEWS</p>
+            <h4>
+              <span class="dollar">$</span><span class="val">16</span
+              ><span>/ month</span>
+            </h4>
           </div>
           <div class="card__part2">
-            <input type="range" name="" id="" />
+            <input
+              class="range"
+              type="range"
+              value="50"
+              min="0"
+              max="100"
+              step="25"
+            />
             <div class="billing">
               <div>
                 <p>Monthly Billing</p>
               </div>
               <div>
-                <input type="radio" />
+                <input class="radio" type="radio" />
               </div>
               <div>
                 <p>Yearly Billing</p>
@@ -73,5 +83,6 @@
         >Frontend Mentor</a
       >. Coded by <a href="https://github.com/HamzahFayad">Hamzah</a>.
     </div>
+    <script src="./index.js"></script>
   </body>
 </html>

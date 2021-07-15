@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap");
 
 $tex-color1: hsl(227, 35%, 25%);
+$tex-color2: hsl(225, 20%, 60%);
 
 html,
 body,
@@ -59,7 +60,7 @@ main {
   border-radius: 6px;
   padding: 30px 60px;
   width: 40%;
-  height: 350px;
+  height: 380px;
   overflow: hidden;
   &__part1 {
     display: flex;
@@ -67,6 +68,25 @@ main {
     justify-content: space-between;
     margin: 4% 0;
     padding-bottom: 30px;
+    .views {
+      font-size: 16px;
+    }
+    p {
+      color: $tex-color2;
+      line-height: 44px;
+    }
+    h4,
+    .val,
+    .dollar {
+      font-size: 26px;
+      color: $tex-color1;
+    }
+    span {
+      font-weight: 100;
+      font-size: 14px;
+      color: $tex-color2;
+      line-height: 44px;
+    }
   }
   &__part2 {
     input[type="range"] {
@@ -107,20 +127,40 @@ main {
       }
     }
     button {
-      background: hsl(227, 35%, 25%);
-      border-radius: 16px;
-      color: #fff;
-      padding: 8px 20px;
+      width: 150px;
+      background: $tex-color1;
+      border-radius: 22px;
+      color: hsl(224, 65%, 95%);
+      padding: 12px 20px;
       outline: none;
       border: none;
       align-self: center;
       cursor: pointer;
+      &:hover {
+        color: #fff;
+      }
     }
   }
 }
 hr {
   width: 100vw;
   transform: translateX(-100px);
+}
+
+@media only screen and (max-width: 1024px) {
+  .head {
+    margin: 8% 0;
+  }
+  .card {
+    width: 90%;
+    height: 400px;
+    &__part2 {
+      .billing {
+        gap: 20px;
+        width: 100%;
+      }
+    }
+  }
 }
 
 @media only screen and (max-width: 375px) {
@@ -137,7 +177,7 @@ hr {
   }
   .card {
     width: 90%;
-    height: 460px;
+    height: 530px;
     margin: 8% 0;
     &__part1,
     &__part2,
@@ -159,6 +199,7 @@ hr {
       padding: 20px 0;
       button {
         margin: 6% 0;
+        width: 180px;
       }
     }
   }
