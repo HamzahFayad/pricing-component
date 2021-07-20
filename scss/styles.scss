@@ -172,6 +172,15 @@ input[type="range"]::-webkit-slider-thumb {
   transition: all 300ms ease;
 }
 
+.attribution {
+  text-align: center;
+  font-size: 14px;
+  a {
+    text-decoration: none;
+    color: $tex-color1;
+  }
+}
+
 @media only screen and (max-width: 1024px) {
   .head {
     margin: 8% 0;
